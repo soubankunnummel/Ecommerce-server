@@ -98,6 +98,7 @@ module.exports = {
 
   allProducts: async (req, res) => {
     const products = await product.find(); 
+    console.log(products)
     if (!products) {
       res.status(404).send({ status: "error", message: "product not found" });
     }
