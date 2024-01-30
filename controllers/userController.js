@@ -97,8 +97,8 @@ module.exports = {
   // every one can access products
 
   allProducts: async (req, res) => {
-    const products = await product.find(); 
-    console.log(products)
+    const products = await product.find();  
+    console.log("connected",products)
     if (!products) {
       res.status(404).send({ status: "error", message: "product not found" });
     }
